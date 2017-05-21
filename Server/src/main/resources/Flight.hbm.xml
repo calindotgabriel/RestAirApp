@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="model.Flight" table="routes">
+        <meta attribute="class-description">
+            This class contains the flight detail.
+        </meta>
+        <id name="flightId" type="int" column="id">
+            <generator class="native"/>
+        </id>
+        <property name="destination" column="destination" type="string"/>
+        <property name="airport" column="airport" type="string"/>
+        <property name="freeseats" column="freeseats" type="int"/>
+        <property name="datehour" column="date" type="string"/>
+    </class>
+</hibernate-mapping>

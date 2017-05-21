@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+    <bean id="userRepo" class="repository.HibernateRepo"/>
+    <bean id="loginRepo" class="repository.UserManager"/>
+
+    <bean id="flightService" class="service.FlightService">
+        <constructor-arg ref="userRepo"/>
+    </bean>
+
+    <bean id="loginService" class="service.LoginService">
+        <constructor-arg ref="loginRepo"/>
+    </bean>
+
+    <bean class="org.springframework.remoting.rmi.RmiServiceExporter">
+        <property name="serviceName" value="Flight2"/>
+        <property name="service" ref="flightService"/>
+        <property name="serviceInterface" value="service.IFlightService"/>
+        <property name="servicePort" value="1099"/>
+    </bean>
+
+    <bean class="org.springframework.remoting.rmi.RmiServiceExporter">
+        <property name="serviceName" value="Flight"/>
+        <property name="service" ref="loginService"/>
+        <property name="serviceInterface" value="service.ILoginService"/>
+        <property name="servicePort" value="1099"/>
+    </bean>
+
+</beans>

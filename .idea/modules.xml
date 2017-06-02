@@ -3,9 +3,17 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/AirCompanyRest.iml" filepath="$PROJECT_DIR$/.idea/modules/AirCompanyRest.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Client.iml" filepath="$PROJECT_DIR$/.idea/modules/Client.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/RestConfig.iml" filepath="$PROJECT_DIR$/.idea/modules/RestConfig.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Server.iml" filepath="$PROJECT_DIR$/.idea/modules/Server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/AirCompanyRest_main.iml" filepath="$PROJECT_DIR$/.idea/modules/AirCompanyRest_main.iml" group="AirCompanyRest" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/AirCompanyRest_test.iml" filepath="$PROJECT_DIR$/.idea/modules/AirCompanyRest_test.iml" group="AirCompanyRest" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Client/Client.iml" filepath="$PROJECT_DIR$/.idea/modules/Client/Client.iml" group="Client" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Client/Client_main.iml" filepath="$PROJECT_DIR$/.idea/modules/Client/Client_main.iml" group="Client" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Client/Client_test.iml" filepath="$PROJECT_DIR$/.idea/modules/Client/Client_test.iml" group="Client" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/RestConfig/RestConfig.iml" filepath="$PROJECT_DIR$/.idea/modules/RestConfig/RestConfig.iml" group="RestConfig" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/RestConfig/RestConfig_main.iml" filepath="$PROJECT_DIR$/.idea/modules/RestConfig/RestConfig_main.iml" group="RestConfig" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/RestConfig/RestConfig_test.iml" filepath="$PROJECT_DIR$/.idea/modules/RestConfig/RestConfig_test.iml" group="RestConfig" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Server/Server.iml" filepath="$PROJECT_DIR$/.idea/modules/Server/Server.iml" group="Server" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Server/Server_main.iml" filepath="$PROJECT_DIR$/.idea/modules/Server/Server_main.iml" group="Server" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Server/Server_test.iml" filepath="$PROJECT_DIR$/.idea/modules/Server/Server_test.iml" group="Server" />
     </modules>
   </component>
 </project>

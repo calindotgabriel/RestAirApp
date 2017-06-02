@@ -2,6 +2,7 @@ package service;
 
 import model.Flight;
 import repository.HibernateRepo;
+import repository.IFlightRepo;
 
 import java.rmi.RemoteException;
 import java.util.ArrayList;
@@ -9,9 +10,9 @@ import java.util.List;
 
 public class FlightService implements IFlightService
 {
-    private HibernateRepo repo;
+    private IFlightRepo repo;
 
-    public FlightService(HibernateRepo frep)
+    public FlightService(IFlightRepo frep)
     {
         this.repo = frep;
     }

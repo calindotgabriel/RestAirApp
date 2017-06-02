@@ -16,7 +16,7 @@ import java.util.List;
 /**
  * Created by Dragos on 5/8/2017.
  */
-public class HibernateRepo
+public class HibernateRepo implements IFlightRepo
 {
     private static SessionFactory factory;
     private List<Flight> flights = new ArrayList<Flight>();
@@ -124,6 +124,11 @@ public class HibernateRepo
                 }
             }
         }
+    }
+
+    @Override
+    public void deleteFlight(int id) {
+        deleteFlight(id, id);
     }
 
     public void deleteFlight(int id,int idul)

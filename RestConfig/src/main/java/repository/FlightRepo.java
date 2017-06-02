@@ -9,8 +9,7 @@ import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
-@Repository
-public class FlightRepo
+public class FlightRepo implements IFlightRepo
 {
     private FlightList flights = new FlightList();
     private Statement statement;

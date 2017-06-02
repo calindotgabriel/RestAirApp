@@ -1,16 +1,18 @@
 package service;
 
+import repository.IUserManager;
+import repository.UserMManager;
 import repository.UserManager;
 
 import java.rmi.RemoteException;
 
 public class LoginService implements ILoginService
 {
-    private UserManager manager;
+    private IUserManager manager;
 
-    public LoginService(UserManager manager)
+    public LoginService(IUserManager manager)
     {
-        this.manager=new UserManager();
+        this.manager=new UserMManager();
     }
 
     public String initManager(String username,String passwords) throws RemoteException

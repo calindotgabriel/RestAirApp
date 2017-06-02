@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import repository.FlightMRepo;
 import repository.FlightRepo;
 import services.FlightList;
 
@@ -22,7 +23,7 @@ public class FlightController
     private static final String template = "Hello, %s!";
 
     @Autowired
-    private FlightRepo repo;
+    private FlightMRepo repo;
 
     @RequestMapping("/greeting")
     public String greeting(@RequestParam(value="name", defaultValue="World") String name) {
@@ -31,7 +32,7 @@ public class FlightController
 
     @RequestMapping( method= RequestMethod.GET)
     public FlightList getAll(){
-        return repo.getAll();
+        return (FlightList) repo.getAll();
     }
 
     @RequestMapping(value = "/{id}", method = RequestMethod.GET)

@@ -8,8 +8,7 @@ import model.User;
 import java.sql.*;
 import java.util.ArrayList;
 
-public class UserManager
-{
+public class UserManager implements IUserManager {
 
     private ArrayList<User> users=new ArrayList<>();
     private Statement statement;
@@ -48,6 +47,7 @@ public class UserManager
         System.out.println(users);
     }
 
+    @Override
     public int autentificare(String usr, String passw)
     {
         System.out.println(users);

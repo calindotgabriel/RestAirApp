@@ -6,8 +6,7 @@ import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class FlightRepo
-{
+public class FlightRepo implements IFlightRepo {
     private List<Flight> flights = new ArrayList<Flight>();
     private Statement statement;
     private Connection connection;
@@ -44,12 +43,14 @@ public class FlightRepo
         }
     }
 
+    @Override
     public List<Flight> getAll()
     {
         return flights;
     }
 
 
+    @Override
     public List<Flight> findByDestinationAndDate(String dest, String data)
     {
         List<Flight> rez = new ArrayList<Flight>();
@@ -59,6 +60,7 @@ public class FlightRepo
         return rez;
     }
 
+    @Override
     public List<Flight> findByDestination(String dest)
     {
         List<Flight> rez = new ArrayList<Flight>();
@@ -68,6 +70,7 @@ public class FlightRepo
         return rez;
     }
 
+    @Override
     public List<Flight> findByDate(String data)
     {
         List<Flight> rez = new ArrayList<Flight>();
@@ -78,7 +81,8 @@ public class FlightRepo
     }
 
 
-    public void updateFlight(Flight flight,String client,int noticket,String address)
+    @Override
+    public void updateFlight(Flight flight, String client, int noticket, String address)
     {
         for (Flight f: flights)
         {
@@ -121,6 +125,7 @@ public class FlightRepo
         }
     }
 
+    @Override
     public void deleteFlight(int id)
     {
         for (Flight f: flights)
@@ -144,6 +149,7 @@ public class FlightRepo
         }
     }
 
+    @Override
     public Flight findById(int id)
     {
         for (Flight f: flights)
